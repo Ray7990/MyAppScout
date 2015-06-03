@@ -2,8 +2,11 @@
 xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
 android:layout_height="match_parent" tools:context="com.example.camila.myappscout.menores">
 
-<!-- TODO: Update blank fragment layout -->
-<TextView android:layout_width="match_parent" android:layout_height="match_parent"
-    android:text="Ramas menores" />
+    <ListView xmlns:android="http://schemas.android.com/apk/res/android"
+        android:id="@+id/listado"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:entries="@array/Listamenores">
+    </ListView>
 
 </FrameLayout>

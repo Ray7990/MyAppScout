@@ -47,25 +47,10 @@ public class nueva extends AppCompatActivity {
                 .setTabListener(new TabsListener(
                         this, "danzas",Danzas.class));
         actionBar.addTab(tab);
-
-        ListView lista1 = (ListView) findViewById(R.id.listado);
-
-        lista1.setOnItemClickListener(AdapterView.OnItemClickListener() {
-            @Override
-            public void onItemClick(AdapterView<?> adapterView, View view, int i, long l)){
-                /// Obtiene el valor de la casilla elegida
-                String itemSeleccionado = adapterView.getItemAtPosition(i).toString();
-
-                // muestra un mensaje
-                Toast.makeText( getApplicationContext(), "Haz hecho click en " + itemSeleccionado, Toast.LENGTH_SHORT).show();
-
-            }
-        });
-
-
-
+        
 
 }
+
     public class TabsListener  implements ActionBar.TabListener {
 
         private Fragment fragment;
@@ -93,7 +78,7 @@ public class nueva extends AppCompatActivity {
         return true;
     }
 
-    @Override
+
     //public boolean onOptionsItemSelected(MenuItem item) {
         // Handle action bar item clicks here. The action bar will
         // automatically handle clicks on the Home/Up button, so long
@@ -108,6 +93,7 @@ public class nueva extends AppCompatActivity {
         //return super.onOptionsItemSelected(item);
    // }
 
+    @Override
     public boolean onOptionsItemSelected(MenuItem item){
         Intent myIntent = new Intent(getApplicationContext(), MainActivity.class);
         startActivityForResult(myIntent, 0);
